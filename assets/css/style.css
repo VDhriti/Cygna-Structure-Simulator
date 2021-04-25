@@ -403,28 +403,28 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-/* #heros {
+#heroes {
   width: 100%;
   position: relative;
-  background: rgb(245, 245, 245);
   position: relative;
+  height: 20vh;
 }
 
-#heros .containerr {
+#heroes .container {
   padding-top: 40px;
   justify-content: center;
 }
 
-#heros .center-img {
+#heroes .center-img {
   padding-left: 30%;
   padding-right: 30%;
   justify-content: center;
   justify-self: center;
 }
 
-#heros .center-img .imgss {
+#heroes .center-img .imgss {
   max-width: 100%;
-} */
+}
 
 #hero {
   width: 100%;
@@ -450,29 +450,28 @@ h6 {
   justify-content: center;
 }
 
-#hero .tab {
+/* #hero .tab {
   padding-top: 40px;
   justify-content: center;
   background-size: cover;
   position: relative;
-}
+} */
 
-.center-img {
-  margin-top: 10%;
+#hero .center-img {
   padding-left: 25%;
   padding-right: 25%;
   justify-content: center;
   justify-self: center;
 }
 
-.center-txt {
+#hero .center-txt {
   padding-left: 25%;
   padding-right: 25%;
   justify-content: center;
   justify-self: center;
 }
 
-.center-img .imgss {
+#hero .center-img .imgss {
   max-width: 100%;
 }
 
@@ -523,12 +522,22 @@ h6 {
   transition: none;
   font-size: 20px;
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  border: 2px solid #00767a;
+  font-weight: 500;
+  border: 1px solid #83dcdf;
+}
+
+#hero .btn-next:hover {
+  transform: scale(0.96);
+  border: 1px solid #86dfe2e8;
+  color: #16adb3;
+}
+
+#hero .btn-next:focus {
+  transform: scale(0.93);
 }
 
 #hero .btn-next-2 {
-  margin-top: 25px;
+  margin-top: 20px;
   margin-left: 38.5%;
   padding: 10px 40px;
   border-radius: 4px;
@@ -536,8 +545,18 @@ h6 {
   transition: none;
   font-size: 20px;
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  border: 2px solid #00767a;
+  font-weight: 500;
+  border: 1px solid #83dcdf;
+}
+
+#hero .btn-next-2:hover {
+  transform: scale(0.96);
+  border: 1px solid #86dfe2e8;
+  color: #16adb3;
+}
+
+#hero .btn-next-2:focus {
+  transform: scale(0.93);
 }
 
 #hero .icon-boxes {
@@ -553,12 +572,15 @@ h6 {
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
+  border-width: 0;
 }
 
 #hero .icon-box .title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
+  color: #124265;
+  transition: 0.3s;
 }
 
 #hero .icon-box .title a {
@@ -583,7 +605,20 @@ h6 {
 }
 
 #hero .icon-box:hover {
-  transform: scale(1.08);
+  transform: scale(1.07);
+}
+
+#hero .icon-box:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 32px 0 rgba(7, 70, 110, 0.288);
+}
+
+#hero .icon-box:focus .title {
+  color: #2487ce;
+}
+
+#hero .icon-box:hover .title {
+  color: #2487ce;
 }
 
 #hero .icon-box:hover .title a {
@@ -616,6 +651,44 @@ h6 {
   }
 }
 
+#counts .counts-section-bg {
+  justify-content: center;
+}
+
+.container-box {
+  margin-left: 34%;
+  justify-self: center;
+  width: 32%;
+  max-height: 60vh;
+  padding: 50px 30px;
+  position: relative;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 40px 0 rgba(9, 191, 197, 0.301);
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  z-index: 2;
+  border-width: 0;
+}
+
+#final-thing {
+  font-size: 150px;
+  font-weight: 800;
+  color: #0c444e;
+  animation: fade 4s linear;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
