@@ -67,18 +67,23 @@ function selectOption(){
             focus_log.push(temp[i].getAttribute("id"));
         }}
     }
-    console.log(focus_log)    
+    // console.log(focus_log)    
 }
 
 function addCount(n){
     //finding the last focused item and appending it
     option_chosen_array.push(focus_log[focus_log.length-1]);
     score.push(dict[focus_log[focus_log.length-1]]);
-    console.log(score)
+    // console.log(score)
 
     currentTab = currentTab + n;
     if (score.length != (currentTab)){
         alert("Either you're cheating or there is a program error :(. In case of the latter you are kindly requested to contact the Cygna Space Society core team to report the issue.");
+        currentTab = 0;
+        focus_log = [];
+        option_chosen_array = [];
+        score = [];
+        final_score = 0;
     }
 
     if (currentTab == document.getElementsByClassName("test").length-1){
