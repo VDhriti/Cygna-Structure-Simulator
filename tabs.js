@@ -1,3 +1,4 @@
+
 var score = []; //the scores as per the option
 var option_chosen_array = []; // the option id via the getAttribute tag
 var dict = {
@@ -98,7 +99,7 @@ function addCount(n){
             final_score = final_score + score[i];
         }
 
-        final_score = (final_score*10)/6
+        final_score = Math.round((final_score*10)/6);
         final_final_score = final_score.toString() + "%";
     
         function scoreDisplay(){
@@ -111,5 +112,3 @@ function addCount(n){
 
     showTab(currentTab)
 }
-
-
