@@ -657,8 +657,9 @@ h6 {
 }
 
 .container-box {
-  margin-left: 34%;
+  margin-left: 31%;
   justify-self: center;
+  width: 40%;
   max-height: 60vh;
   padding: 50px 30px;
   position: relative;
@@ -666,7 +667,7 @@ h6 {
   background: rgb(255, 255, 255);
   box-shadow: 0 0 40px 0 rgba(9, 191, 197, 0.301);
   transition: all 0.3s ease-in-out;
-  border-radius: 50%;
+  border-radius: 20%;
   z-index: 2;
   border-width: 0;
 }

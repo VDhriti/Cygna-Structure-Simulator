@@ -95,11 +95,15 @@ function addCount(n){
     if (currentTab == document.getElementsByClassName("test").length-1){
         //finding the total score i.e the sum of array components
         for(i=0;i< (score.length); i++){
-        final_score = final_score + score[i];
-    }
+            final_score = final_score + score[i];
+        }
+
+        final_score = (final_score*10)/6
+        final_final_score = final_score.toString() + "%";
+    
         function scoreDisplay(){
-            console.log("this half works:  ", final_score)
-                return(final_score);
+            // console.log("this half works:  ", final_score)
+                return(final_final_score);
             }
         
         document.getElementById("final-thing").innerHTML = scoreDisplay();
