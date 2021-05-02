@@ -520,10 +520,10 @@ h6 {
 }
 
 #hero h2 {
-  color: #5e5e5e;
-  margin: 5px;
+  color: #414141;
+  margin: 10px;
   padding-bottom: 10px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 150;
   text-align: center;
 }
@@ -541,7 +541,15 @@ h6 {
   color: #0a93c9;
   margin: 10px;
   padding-bottom: 10px;
-  font-size: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#hero h5 {
+  color: #272727;
+  margin: 3px;
+  padding-bottom: 10px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -550,12 +558,15 @@ h6 {
 }
 
 #hero .btn-next {
+  margin: 25px;
+  margin-bottom: 30px;
   text-align: center;
   padding: 10px 40px;
+  background-color: rgb(14, 114, 114);
   border-radius: 4px;
-  color: #00a1a7;
+  color: #d1f8f8;
   transition: none;
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   border: 1px solid #83dcdf;
@@ -564,7 +575,8 @@ h6 {
 #hero .btn-next:hover {
   transform: scale(0.96);
   border: 1px solid #86dfe2e8;
-  color: #16adb3;
+  color: #ffffff;
+  box-shadow: 0 0 20px 0 rgba(10, 110, 110, 0.39);
 }
 
 #hero .btn-next:focus {
