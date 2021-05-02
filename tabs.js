@@ -10,32 +10,33 @@ var dict = {
     5: 0,
     6: 4,
     7: 10,
-    8: 7,
+    8: 6,
 
-    9: 0,
-    10: 10,
-    11: 4,
-    12: 8,
+    9: 2,
+    10: 0,
+    11: 10,
+    12: 6,
 
-    13: 4,
+    13: 0,
     14: 10,
-    15: 0,
-    16: 2,
+    15: 4,
+    16: 8,
 
     17: 4,
     18: 6,
     19: 0,
     20: 10,
 
+    21: 3,
+    22: 0,
+    23: 1,
+    24: 10,
+
     21: 4,
     22: 0,
     23: 10,
     24: 7,
 
-    25: 1,
-    26: 2,
-    26: 3,
-    28: 4
 }
 var focus_log = [];
 var final_score = 0;
@@ -73,7 +74,7 @@ function showTab(n){
             }
         }
 
-        else if ((length == 4 && option_chosen_array[3] != "16") || length == 5) {
+        else if ((length == 4 && option_chosen_array[3] != "16") || length == 5 || length == 6) {
             if (option_chosen_array[1] == "5"){
                 if (option_chosen_array[3] == "13"){
                     z[6].style.display = "block";
@@ -101,92 +102,92 @@ function showTab(n){
             }
         }
 
-        else if (length == 6) {
+        else if (length == 7) {
             if (option_chosen_array[1] == "5"){
                 if (option_chosen_array[3] == "13"){
-                    if (option_chosen_array[1] == "5"){
+                    if (option_chosen_array[1] == "25"){
                         z[14].style.display = "block";
-                    } else if (option_chosen_array[1] == "6"){
+                    } else if (option_chosen_array[1] == "26"){
                         z[15].style.display = "block";
-                    } else if (option_chosen_array[1] == "7"){
+                    } else if (option_chosen_array[1] == "27"){
                         z[16].style.display = "block";
-                    } else if (option_chosen_array[1] == "8"){
+                    } else if (option_chosen_array[1] == "28"){
                         z[17].style.display = "block";
                     }
                 } else if (option_chosen_array[3] == "14" || option_chosen_array[3] == "15"){
-                    if (option_chosen_array[1] == "5"){
+                    if (option_chosen_array[1] == "25"){
                         z[18].style.display = "block";
-                    } else if (option_chosen_array[1] == "6"){
+                    } else if (option_chosen_array[1] == "26"){
                         z[19].style.display = "block";
-                    } else if (option_chosen_array[1] == "7"){
+                    } else if (option_chosen_array[1] == "27"){
                         z[20].style.display = "block";
-                    } else if (option_chosen_array[1] == "8"){
+                    } else if (option_chosen_array[1] == "28"){
                         z[21].style.display = "block";
                     }
                 }
             } else if (option_chosen_array[1] == "6"){
                 if (option_chosen_array[3] == "13"){
-                    if (option_chosen_array[1] == "5"){
+                    if (option_chosen_array[1] == "25"){
                         z[22].style.display = "block";
-                    } else if (option_chosen_array[1] == "6"){
+                    } else if (option_chosen_array[1] == "26"){
                         z[23].style.display = "block";
-                    } else if (option_chosen_array[1] == "7"){
+                    } else if (option_chosen_array[1] == "27"){
                         z[24].style.display = "block";
-                    } else if (option_chosen_array[1] == "8"){
+                    } else if (option_chosen_array[1] == "28"){
                         z[25].style.display = "block";
                     }
                 } else if (option_chosen_array[3] == "14" || option_chosen_array[3] == "15"){
-                    if (option_chosen_array[1] == "5"){
+                    if (option_chosen_array[1] == "25"){
                         z[26].style.display = "block";
-                    } else if (option_chosen_array[1] == "6"){
+                    } else if (option_chosen_array[1] == "26"){
                         z[27].style.display = "block";
-                    } else if (option_chosen_array[1] == "7"){
+                    } else if (option_chosen_array[1] == "27"){
                         z[28].style.display = "block";
-                    } else if (option_chosen_array[1] == "8"){
+                    } else if (option_chosen_array[1] == "28"){
                         z[29].style.display = "block";
                     }
                 }
             } else if (option_chosen_array[1] == "7"){
                 if (option_chosen_array[3] == "13"){
-                    if (option_chosen_array[1] == "5"){
+                    if (option_chosen_array[1] == "25"){
                         z[30].style.display = "block";
-                    } else if (option_chosen_array[1] == "6"){
+                    } else if (option_chosen_array[1] == "26"){
                         z[31].style.display = "block";
-                    } else if (option_chosen_array[1] == "7"){
+                    } else if (option_chosen_array[1] == "27"){
                         z[32].style.display = "block";
-                    } else if (option_chosen_array[1] == "8"){
+                    } else if (option_chosen_array[1] == "28"){
                         z[33].style.display = "block";
                     }
                 } else if (option_chosen_array[3] == "14" || option_chosen_array[3] == "15"){
-                    if (option_chosen_array[1] == "5"){
+                    if (option_chosen_array[1] == "25"){
                         z[34].style.display = "block";
-                    } else if (option_chosen_array[1] == "6"){
+                    } else if (option_chosen_array[1] == "26"){
                         z[35].style.display = "block";
-                    } else if (option_chosen_array[1] == "7"){
+                    } else if (option_chosen_array[1] == "27"){
                         z[36].style.display = "block";
-                    } else if (option_chosen_array[1] == "8"){
+                    } else if (option_chosen_array[1] == "28"){
                         z[37].style.display = "block";
                     }
                 }
             } else if (option_chosen_array[1] == "8"){
                 if (option_chosen_array[3] == "13"){
-                    if (option_chosen_array[1] == "5"){
+                    if (option_chosen_array[1] == "25"){
                         z[38].style.display = "block";
-                    } else if (option_chosen_array[1] == "6"){
+                    } else if (option_chosen_array[1] == "26"){
                         z[39].style.display = "block";
-                    } else if (option_chosen_array[1] == "7"){
+                    } else if (option_chosen_array[1] == "27"){
                         z[40].style.display = "block";
-                    } else if (option_chosen_array[1] == "8"){
+                    } else if (option_chosen_array[1] == "28"){
                         z[41].style.display = "block";
                     }
                 } else if (option_chosen_array[3] == "14" || option_chosen_array[3] == "15"){
-                    if (option_chosen_array[1] == "5"){
+                    if (option_chosen_array[1] == "25"){
                         z[42].style.display = "block";
-                    } else if (option_chosen_array[1] == "6"){
+                    } else if (option_chosen_array[1] == "26"){
                         z[43].style.display = "block";
-                    } else if (option_chosen_array[1] == "7"){
+                    } else if (option_chosen_array[1] == "27"){
                         z[44].style.display = "block";
-                    } else if (option_chosen_array[1] == "8"){
+                    } else if (option_chosen_array[1] == "28"){
                         z[45].style.display = "block";
                     }
                 }
