@@ -248,7 +248,7 @@ function addCount(n){
                 final_score = final_score + score[i];
             }
 
-            final_score = Math.round((final_score*10)/6);
+            final_score = Math.round((final_score*10)/7);
             final_final_score = final_score.toString() + "%";
     
             function scoreDisplay(){
