@@ -1,3 +1,20 @@
+@font-face {
+  font-family: dodger;
+  src: url(dodger-font/Dodger-gKL4.otf);
+}
+
+@font-face {
+  font-family: dodger;
+  src: url(dodger-font/DodgerCondensedItalic-4Dzl.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: dodger;
+  src: url(dodger-font/DodgerTitle-AMvM.otf);
+  font-style: bold;
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -126,13 +143,14 @@ h6 {
 }
 
 #header .logo {
-  font-size: 28px;
+  font-size: 20px;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-weight: 300;
   letter-spacing: 0.5px;
-  font-family: "Poppins", sans-serif;
+  font-style: condensed;
+  font-family: "Dodger", "Poppins", sans-serif;
 }
 
 #header .logo a {
@@ -493,11 +511,12 @@ h6 {
 #hero h1 {
   margin: 0;
   text-align: center;
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 60px;
   color: #0e4b5e;
-  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-family: "Dodger", "Poppins", sans-serif;
 }
 
 #hero h2 {
