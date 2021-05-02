@@ -415,9 +415,16 @@ h6 {
   justify-content: center;
 }
 
-#heroes .center-img {
-  padding-left: 30%;
+.center-img {
+  display: flex;
+  justify-content: center;
   padding-right: 30%;
+  padding-left: 30%;
+}
+
+#hero .center-img-index {
+  padding-left: 20%;
+  padding-right: 20%;
   justify-content: center;
   justify-self: center;
 }
@@ -458,15 +465,23 @@ h6 {
 } */
 
 #hero .center-img {
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 20%;
+  padding-right: 20%;
+  justify-content: center;
+  justify-self: center;
+}
+
+#hero .center-blocks {
+  text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
   justify-content: center;
   justify-self: center;
 }
 
 #hero .center-txt {
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 20%;
+  padding-right: 20%;
   justify-content: center;
   justify-self: center;
 }
@@ -516,7 +531,7 @@ h6 {
 }
 
 #hero .btn-next {
-  margin-left: 31%;
+  text-align: center;
   padding: 10px 40px;
   border-radius: 4px;
   color: #00a1a7;
@@ -537,26 +552,42 @@ h6 {
   transform: scale(0.93);
 }
 
-#hero .btn-next-2 {
+.btn-next-2 {
+  text-align: center;
   margin-top: 20px;
-  margin-left: 38.5%;
-  padding: 10px 40px;
-  border-radius: 4px;
-  color: #00a1a7;
+  padding: 8px 36px;
+  border-radius: 7px;
+  background-color: rgb(14, 114, 114);
+  color: #d1f8f8;
   transition: none;
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  border: 1px solid #83dcdf;
+  border: 0px solid #83dcdf;
 }
 
-#hero .btn-next-2:hover {
+.btn-next-3 {
+  text-align: center;
+  margin-top: 20px;
+  padding: 8px 36px;
+  border-radius: 7px;
+  background-color: rgb(14, 114, 114);
+  color: #d1f8f8;
+  transition: none;
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  border: 0px solid #83dcdf;
+}
+
+.btn-next-2:hover {
   transform: scale(0.96);
   border: 1px solid #86dfe2e8;
-  color: #16adb3;
+  color: #ffffff;
+  box-shadow: 0 0 40px 0 rgba(23, 109, 109, 0.575);
 }
 
-#hero .btn-next-2:focus {
+.btn-next-2:focus {
   transform: scale(0.93);
 }
 
@@ -693,6 +724,37 @@ h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+.form-class {
+  justify-content: center;
+  margin: 50px;
+  align-items: center;
+}
+
+.form-items {
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  margin: 25px;
+}
+
+.form-label-text {
+  font-weight: 400;
+  text-align: center;
+  font-size: xx-large;
+  color: #0c444e;
+}
+
+.form-box {
+  box-shadow: 0 0 30px 0 rgba(23, 189, 201, 0.253);
+  border-radius: 22px;
+  width: 40%;
+  padding: 20px;
+  border: none;
+  margin: 5px;
+  font-family: inherit;
+}
+
 section {
   padding: 80px 0;
   overflow: hidden;
@@ -702,12 +764,13 @@ section {
   background-color: #f8fbfe;
 }
 
-.section-title {
+#hero .section-title {
   text-align: center;
   padding-bottom: 30px;
+  padding-top: 30px;
 }
 
-.section-title h2 {
+#hero .section-title h2 {
   font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
@@ -722,6 +785,162 @@ section {
   color: #919191;
 }
 
+.contact .info {
+  width: 100%;
+  background: #fff;
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #2487ce;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #e3f0fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #124265;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #217bbc;
+}
+
+.contact .info .email,
+.contact .info .phone {
+  margin-top: 40px;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #2487ce;
+  color: #fff;
+}
+
+.contact .php-email-form {
+  width: 100%;
+  background: #fff;
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #2487ce;
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type="submit"] {
+  background: #2487ce;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background: #3194db;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

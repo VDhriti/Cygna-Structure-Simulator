@@ -48,9 +48,6 @@ function showTab(n){
     var x = document.getElementsByClassName("test");
     var y = document.getElementsByClassName("btn-next-2")
     var z = document.getElementsByClassName("imgss")
-    if (x.length != y.length+1) {
-        alert("ERROR")
-    } else {
         for (i = 0; i < z.length; i++) {
             z[i].style.display = "none";
         }
@@ -212,7 +209,6 @@ function showTab(n){
         }
 
     }
-}
 
 //focus logger lol since radio buttons wont work
 function selectOption(){
@@ -225,45 +221,83 @@ function selectOption(){
     // console.log(focus_log)    
 }
 
+
+var name_stored = "";
+var email = "";
+
+function hide(n) {
+    name_stored = document.getElementById("fname").value;
+    email = document.getElementById("fmail").value;
+    currentTab = currentTab + n;
+    showTab(currentTab)
+}
+
+
 function addCount(n){
-    if (focus_log.length > 0) {
-        //finding the last focused item and appending it
-        option_chosen_array.push(focus_log[focus_log.length-1]);
-        score.push(dict[focus_log[focus_log.length-1]]);
-        // console.log(score)
+    console.log(score)
+    if (currentTab == document.getElementsByClassName("test").length-2){
+        name_stored = document.getElementById("fname").value;
+        email = document.getElementById("fmail").value;
 
-        currentTab = currentTab + n;
-        if (score.length != (currentTab)){
-            alert("Either you're cheating or there is a program error :(. In case of the latter you are kindly requested to contact the Cygna Space Society core team to report the issue.");
-            currentTab = 0;
-            focus_log = [];
-            option_chosen_array = [];
-            score = [];
-            final_score = 0;
+        for(i=0;i< (score.length); i++){
+            final_score = final_score + score[i];
         }
 
-        if (currentTab == document.getElementsByClassName("test").length-1) {
-            //finding the total score i.e the sum of array components
-            for(i=0;i< (score.length); i++){
-                final_score = final_score + score[i];
-            }
-
-            final_score = Math.round((final_score*10)/7);
-            final_final_score = final_score.toString() + "%";
-    
-            function scoreDisplay(){
-                // console.log("this half works:  ", final_score)
-                    return(final_final_score);
-                }
+        final_score = Math.round((final_score*10)/7);
+        final_final_score = final_score.toString() + "%";
         
-            document.getElementById("final-thing").innerHTML = scoreDisplay();
-        } else {
-            focus_log = [];
-        }
-
+        currentTab = currentTab + n;
         showTab(currentTab)
-
     } else {
-        alert("There is no option selected.")
+        if (focus_log.length > 0) {
+            //finding the last focused item and appending it
+            option_chosen_array.push(focus_log[focus_log.length-1]);
+            score.push(dict[focus_log[focus_log.length-1]]);
+            // console.log(score)
+    
+            currentTab = currentTab + n;
+            if (score.length != (currentTab)){
+                alert("Either you're cheating or there is a program error :(. In case of the latter you are kindly requested to contact the Cygna Space Society core team to report the issue.");
+                currentTab = 0;
+                focus_log = [];
+                option_chosen_array = [];
+                score = [];
+                final_score = 0;
+            }
+    
+            if (currentTab == document.getElementsByClassName("test").length-1) {
+                //finding the total score i.e the sum of array components
+                
+        
+                function scoreDisplay(){
+                    // console.log("this half works:  ", final_score)
+                        return(final_final_score);
+                    }
+            
+                document.getElementById("final-thing").innerHTML = scoreDisplay();
+                document.getElementById("secret").value = final_final_score;
+                document.getElementById("name-hidden").value = name_stored;
+                document.getElementById("email-hidden").value = email;
+            } else {
+                focus_log = [];
+            }
+    
+            showTab(currentTab)
+    
+        } else {
+            alert("There is no option selected.")
+        }
     }
+    
+}
+
+
+
+function clear() {
+    score = []; //the scores as per the option
+    option_chosen_array = []; // the option id via the getAttribute tag
+    focus_log = [];
+    final_score = 0;
+    final_final_score = 0;
+    currentTab = 0;
 }
