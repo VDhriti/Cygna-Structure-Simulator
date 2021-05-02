@@ -214,9 +214,9 @@ function showTab(n){
 function selectOption(){
     var temp = document.getElementsByClassName("icon-box");
     for(i=0; i<temp.length ;i++){
-        if(temp[i] === document.activeElement){{
+        if(temp[i] === document.activeElement){
             focus_log.push(temp[i].getAttribute("id"));
-        }}
+        }
     }
     // console.log(focus_log)    
 }
@@ -225,17 +225,18 @@ function selectOption(){
 var name_stored = "";
 var email = "";
 
-function hide(n) {
-    name_stored = document.getElementById("fname").value;
-    email = document.getElementById("fmail").value;
-    currentTab = currentTab + n;
-    showTab(currentTab)
-}
+// function hide(n) {
+//     name_stored = document.getElementById("fname").value;
+//     email = document.getElementById("fmail").value;
+//     currentTab = currentTab + n;
+//     showTab(currentTab)
+// }
 
 
 function addCount(n){
     console.log(score)
     if (currentTab == document.getElementsByClassName("test").length-2){
+        console.log("this worked")
         name_stored = document.getElementById("fname").value;
         email = document.getElementById("fmail").value;
 
@@ -245,10 +246,16 @@ function addCount(n){
 
         final_score = Math.round((final_score*10)/7);
         final_final_score = final_score.toString() + "%";
-        
-        currentTab = currentTab + n;
+
+        alert(final_final_score)
+        currentTab = currentTab + 1;
         showTab(currentTab)
+        document.getElementById("final-thing").innerHTML = final_final_score;
+        document.getElementById("secret").value = final_final_score;
+        document.getElementById("name-hidden").value = name_stored;
+        document.getElementById("email-hidden").value = email;
     } else {
+ 
         if (focus_log.length > 0) {
             //finding the last focused item and appending it
             option_chosen_array.push(focus_log[focus_log.length-1]);
@@ -256,7 +263,9 @@ function addCount(n){
             // console.log(score)
     
             currentTab = currentTab + n;
-            if (score.length != (currentTab)){
+            if (score.length > 7){
+                alert(score.length)
+                alert(currentTab)
                 alert("Either you're cheating or there is a program error :(. In case of the latter you are kindly requested to contact the Cygna Space Society core team to report the issue.");
                 currentTab = 0;
                 focus_log = [];
@@ -264,21 +273,8 @@ function addCount(n){
                 score = [];
                 final_score = 0;
             }
-    
-            if (currentTab == document.getElementsByClassName("test").length-1) {
-                //finding the total score i.e the sum of array components
-                
-        
-                function scoreDisplay(){
-                    // console.log("this half works:  ", final_score)
-                        return(final_final_score);
-                    }
-            
-                document.getElementById("final-thing").innerHTML = scoreDisplay();
-                document.getElementById("secret").value = final_final_score;
-                document.getElementById("name-hidden").value = name_stored;
-                document.getElementById("email-hidden").value = email;
-            } else {
+
+            if (currentTab < 7){
                 focus_log = [];
             }
     
