@@ -247,7 +247,6 @@ function addCount(n){
         final_score = Math.round((final_score*10)/7);
         final_final_score = final_score.toString() + "%";
 
-        alert(final_final_score)
         currentTab = currentTab + 1;
         showTab(currentTab)
         document.getElementById("final-thing").innerHTML = final_final_score;
@@ -264,8 +263,6 @@ function addCount(n){
     
             currentTab = currentTab + n;
             if (score.length > 7){
-                alert(score.length)
-                alert(currentTab)
                 alert("Either you're cheating or there is a program error :(. In case of the latter you are kindly requested to contact the Cygna Space Society core team to report the issue.");
                 currentTab = 0;
                 focus_log = [];
